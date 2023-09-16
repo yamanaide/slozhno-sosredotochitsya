@@ -1,12 +1,247 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root .theme_dark {
+  --main-text-color: #F1B2CE;
+  --text-color: #000028;
+  --main-font: IBM Plex Mono;
+  --bg-color: #FF0070;
+  --accent-color: #DB00FF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-text-color: #F1B2CE;
+    --text-color: #000028;
+    --main-font: IBM Plex Mono;
+    --bg-color: #FF0070;
+    --accent-color: #DB00FF;
+  }
+
+  .page {
+    color: var(--main-text-color, #F1B2CE);
+    background-image: url(../images/cover-image-dark.png);
+  }
+  
+  .header::after {
+    border-top: 1px solid var(--bg-color, #FF0070);
+    border-right: 1px solid var(--bg-color, #FF0070);
+  }
+  
+  .header::before {
+    border-bottom: 1px solid var(--bg-color, #FF0070);
+    border-left: 1px solid var(--bg-color, #FF0070);
+  }
+  
+  .header__theme-menu-button {
+    color: var(--bg-color, #FF0070);
+    background-color: var(--text-color, #000028);
+  }
+  
+  .header__theme-menu-button:hover {
+    border: 1px solid var(--bg-color, #FF0070);
+  }
+  
+  .header__theme-menu-button:focus-visible {
+    border-bottom: 1px solid var(--bg-color, #FF0070);
+  
+  }
+  
+  .header__theme-menu-button_active {
+    border: 1px solid var(--bg-color, #FF0070);
+    pointer-events: none;
+  }
+  
+  .header__title {
+    color: var(--accent-color, #DB00FF);
+    text-shadow: 4px 4px 0px var(--bg-color, #FF0070);
+  }
+  
+  .headder__paragraph {
+    color: var(--text-color, #000028);
+    background-color: var(--bg-color, #FF0070);
+  }
+  
+  .content__title {
+    color: var(--bg-color, #FF0070);
+  }
+  
+  .shadow {
+    text-shadow: 2px 2px 0px var(--bg-color, #FF0070);
+  }
+  
+  .shadow:hover {
+    border-bottom: 1px solid var(--main-text-color, #F1B2CE);
+  }
+  
+  .shadow:focus-visible {
+    border: 1px solid var(--main-text-color, #F1B2CE);
+  }
+  
+  .underlining {
+    color: var(--text-color, #000028);
+    background-color: var(--bg-color, #FF0070);
+  }
+  
+  .content__paragraph {
+    color: var(--main-text-color, #F1B2CE);
+  }
+  
+  .underlining--2 {
+    color: var(--text-color, #000028);
+    background-color: var(--bg-color, #FF0070);
+  }
+  
+  .footer::after {
+    border-bottom: 1px solid var(--bg-color, #FF0070);
+    border-left: 1px solid var(--bg-color, #FF0070);
+  }
+  
+  .footer::before {
+    border-top: 1px solid var(--bg-color, #FF0070);
+    border-right: 1px solid var(--bg-color, #FF0070);
+  }
+  
+  .footer__title {
+    color: var(--accent-color, #DB00FF);
+    text-shadow: 4px 4px 0px var(--bg-color, #FF0070);
+  }
+
+  .decorated-zone {
+    position: absolute;
+    display: flex;
+    justify-self: end;
+    color: var(--bg-color, #FF0070);
+    font-family: var(--main-font, sans-serif);
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 138.889%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .decorated-zone::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin-inline-start: 15px;
+    border-radius: 50%;
+    background: radial-gradient(var(--bg-color, #FF0070), transparent);
+    background-color: var(--bg-color, #FF0070);
+    filter: drop-shadow(0px 0px 4px var(--bg-color, #FF0070));
+    transform: translate(-60%, 60%);
+  }
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  color: var(--main-text-color, #F1B2CE);
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .header::after {
+  border-top: 1px solid var(--bg-color, #FF0070);
+  border-right: 1px solid var(--bg-color, #FF0070);
+}
+
+.theme_dark .header::before {
+  border-bottom: 1px solid var(--bg-color, #FF0070);
+  border-left: 1px solid var(--bg-color, #FF0070);
+}
+
+.theme_dark .header__theme-menu-button {
+  color: var(--bg-color, #FF0070);
+  background-color: var(--text-color, #000028);
+}
+
+.theme_dark .header__theme-menu-button:hover {
+  border: 1px solid var(--bg-color, #FF0070);
+}
+
+.theme_dark .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--bg-color, #FF0070);
+
+}
+
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--bg-color, #FF0070);
+  pointer-events: none;
+}
+
+.theme_dark .header__title {
+  color: var(--accent-color, #DB00FF);
+  text-shadow: 4px 4px 0px var(--bg-color, #FF0070);
+}
+
+.theme_dark .headder__paragraph {
+  color: var(--text-color, #000028);
+  background-color: var(--bg-color, #FF0070);
+}
+
+.theme_dark .content__title {
+  color: var(--bg-color, #FF0070);
+}
+
+.theme_dark .shadow {
+  text-shadow: 2px 2px 0px var(--bg-color, #FF0070);
+}
+
+.theme_dark .shadow:hover {
+  border-bottom: 1px solid var(--main-text-color, #F1B2CE);
+}
+
+.theme_dark .shadow:focus-visible {
+  border: 1px solid var(--main-text-color, #F1B2CE);
+}
+
+.theme_dark .underlining {
+  color: var(--text-color, #000028);
+  background-color: var(--bg-color, #FF0070);
+}
+
+.theme_dark .content__paragraph {
+  color: var(--main-text-color, #F1B2CE);
+}
+
+.theme_dark .underlining--2 {
+  color: var(--text-color, #000028);
+  background-color: var(--bg-color, #FF0070);
+}
+
+.theme_dark .footer::after {
+  border-bottom: 1px solid var(--bg-color, #FF0070);
+  border-left: 1px solid var(--bg-color, #FF0070);
+}
+
+.theme_dark .footer::before {
+  border-top: 1px solid var(--bg-color, #FF0070);
+  border-right: 1px solid var(--bg-color, #FF0070);
+}
+
+.theme_dark .footer__title {
+  color: var(--accent-color, #DB00FF);
+  text-shadow: 4px 4px 0px var(--bg-color, #FF0070);
+}
+
+.theme_dark .decorated-zone {
+  position: absolute;
+  display: flex;
+  justify-self: end;
+  color: var(--bg-color, #FF0070);
+  font-family: var(--main-font, sans-serif);
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 138.889%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.theme_dark .decorated-zone::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  margin-inline-start: 15px;
+  border-radius: 50%;
+  background: radial-gradient(var(--bg-color, #FF0070), transparent);
+  background-color: var(--bg-color, #FF0070);
+  filter: drop-shadow(0px 0px 4px var(--bg-color, #FF0070));
+  transform: translate(-60%, 60%);
 }

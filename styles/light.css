@@ -1,12 +1,99 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+:root .theme_light {
+  --main-text-color: #353430;
+  --main-background-color: #ffeef6;
+  --main-font: IBM Plex Mono;
+  --bg-color: #ff8dcb;
+  --accent-color: #FF0070;
+}
 
 .page.theme_light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  color: var(--main-text-color, #353430);
+  background-color: var(--main-background-color, #ffeef6);
+  background-image: url(../images/cover-image-light.png);
+}
+
+.theme_light .decorated-zone {
+  display: none;
+}
+
+.theme_light .header::after {
+  border-top: 1px solid var(--main-text-color, #353430);
+  border-right: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .header::before {
+  border-bottom: 1px solid var(--main-text-color, #353430);
+  border-left: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .header__theme-menu-button {
+  color: var(--main-text-color, #353430);
+  background-color: var(--main-background-color, #ffeef6);
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50, 49, 45, 0.40);
+}
+
+.theme_light .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .header__title {
+  color: #FFC2E6;
+  text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
+}
+
+.theme_light .headder__paragraph {
+  color: var(--main-text-color, #353430);
+  background-color: var(--bg-color, #ff8dcb);
+}
+
+.theme_light .content__title {
+  color: var(--main-text-color, #353430);
+}
+
+.theme_light .shadow {
+  text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
+}
+
+.theme_light .shadow:hover {
+  border-bottom: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .shadow:focus-visible {
+  border: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .underlining {
+  color: var(--main-text-color, #353430);
+  background-color: var(--bg-color, #ff8dcb);
+}
+
+.theme_light .content__paragraph {
+  color: var(--main-text-color, #353430);
+}
+
+.theme_light .underlining--2 {
+  color: var(--main-text-color, #353430);
+  background-color: var(--bg-color, #ff8dcb);
+}
+
+.theme_light .footer::after {
+  border-bottom: 1px solid var(--main-text-color, #353430);
+  border-left: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .footer::before {
+  border-top: 1px solid var(--main-text-color, #353430);
+  border-right: 1px solid var(--main-text-color, #353430);
+}
+
+.theme_light .footer__title {
+  color: #FFC2E6;
+  text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
 }
