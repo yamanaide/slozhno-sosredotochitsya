@@ -16,6 +16,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr min-content 1fr;
   padding: 20px 20px 0 20px;
+  min-height: 100vh;
+  inline-size: 100%;
 }
 
 .header::after {
