@@ -16,7 +16,7 @@
   }
 
   .page {
-    color: var(--main-text-color, #F1B2CE);
+    background-color: var(--text-color, #000028);
     background-image: url(../images/cover-image-dark.png);
   }
   
@@ -132,7 +132,7 @@
 }
 
 .page.theme_dark {
-  color: var(--main-text-color, #F1B2CE);
+  background-color: var(--text-color, #000028);
   background-image: url(../images/cover-image-dark.png);
 }
 
