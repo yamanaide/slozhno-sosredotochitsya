@@ -15,6 +15,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  width: 100%;
   padding: 20px 20px 0 20px;
 }
 
@@ -251,6 +252,7 @@
 }
 
 .footer {
+  height: 100%;
   padding: 0 20px 20px 20px;
 }
 
@@ -278,7 +280,6 @@
   align-items: center;
   width: 100%;
   padding: 284px 0;
-  padding: 275px 0;
   color: #FFC2E6;
   font-family: var(--main-font, sans-serif);
   font-weight: 700;
