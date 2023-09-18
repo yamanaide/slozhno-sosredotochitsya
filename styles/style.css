@@ -57,14 +57,14 @@
   width: 70px;
   border: none;
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
   line-height: 100%;
   text-align: center;
   text-transform: lowercase;
-  background-color: var(--main-background-color, #ffeef6);
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -73,6 +73,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
+  outline: none;
   border-top: none;
   border-bottom: 1px solid var(--main-text-color, #353430);
   border-inline-start: none;
@@ -82,13 +83,14 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--main-text-color, #353430);
   pointer-events: none;
+  height: 26px;
 }
 
 .header__title {
   grid-column: span 2;
   grid-row: 2;
   color: #FFC2E6;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
@@ -102,7 +104,7 @@
   justify-self: end;
   align-self: center;
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -123,7 +125,7 @@
 
 .content__title {
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -142,6 +144,7 @@
 
 .shadow {
   text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
+  text-decoration: none;
 }
 
 .shadow:hover {
@@ -150,13 +153,14 @@
 }
 
 .shadow:focus-visible {
+  outline: none;
   border: 1px solid var(--main-text-color, #353430);
 }
 
 .underlining {
   margin-bottom: 0.5em;
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -167,7 +171,7 @@
 .content__paragraph {
   margin-bottom: 1em;
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -205,7 +209,7 @@
 .underlining--2 {
   margin-bottom: 0.5em;
   color: var(--main-text-color, #353430);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -253,8 +257,7 @@
 
 .footer {
   padding: 0 20px 20px 20px;
-  block-size: 100vh;
-  inline-size: 100%;
+  min-height: 100vh;
 }
 
 .footer::after {
@@ -280,9 +283,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 284px 0;
+  padding: 50% 0;
   color: #FFC2E6;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   font-style: normal;
@@ -290,17 +293,14 @@
   text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
 }
 
-@media (max-width: 1024px) {
-  .page {
-    width: 1024px;
-  }
-
+@media (width <= 1024px) {
   .header__theme-menu-list {
     gap: 10px;
   }
 
   .header__title {
-    margin: 116px 0 113px -20px;
+    margin: 96px 0 113px -20px;
+    text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
   }
 
   .headder__paragraph {
@@ -338,11 +338,7 @@
   }
 }
 
-@media (max-width: 768px) {
-  .page {
-    width: 768px;
-  }
-
+@media (width <= 768px) {
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
@@ -351,7 +347,7 @@
   }
 
   .header__title {
-    margin: 164px 0 161px -20px;
+    margin: 144px 0 161px -20px;
     text-shadow: 4px 4px 0px var(--bg-color, #ff8dcb);
   }
 
@@ -407,14 +403,11 @@
 
   .footer__title {
     padding: 418px 0;
+    text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
   }
 }
 
-@media (max-width: 375px) {
-  .page {
-    width: 375px;
-  }
-
+@media (width <= 375px) {
   .header {
     display: grid;
     grid-template-columns: 1fr;
@@ -424,12 +417,12 @@
   .header__theme-menu-list {
     flex-direction: column;
     align-items: end;
-    gap: 14px;
+    gap: 13px;
     margin-top: 66px;
   }
 
   .header__title {
-    margin: 60px 0 54px;
+    margin: 50px 0 54px;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     text-shadow: 4px 4px 0px var(--bg-color, #ff8dcb);
   }
@@ -494,5 +487,6 @@
   .footer__title {
     padding: 250px 0;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    text-shadow: 4px 4px 0px var(--bg-color, #ff8dcb);
   }
 }

@@ -1,7 +1,7 @@
 :root .theme_light {
   --main-text-color: #353430;
   --main-background-color: #ffeef6;
-  --main-font: IBM Plex Mono;
+  --main-font: 'IBM Plex Mono';
   --bg-color: #ff8dcb;
   --accent-color: #FF0070;
 }
@@ -27,7 +27,7 @@
 
 .theme_light .header__theme-menu-button {
   color: var(--main-text-color, #353430);
-  background-color: var(--main-background-color, #ffeef6);
+  background-color: transparent;
 }
 
 .theme_light .header__theme-menu-button:hover {
@@ -95,4 +95,24 @@
 .theme_light .footer__title {
   color: #FFC2E6;
   text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
+}
+
+@media (width <= 375px) {
+  .theme_light .header__title {
+    text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
+  }
+
+  .theme_light .footer__title {
+    text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
+  }
+}
+
+@media (width <= 768px) {
+  .theme_light .header__title {
+    text-shadow: 4px 4px 0px var(--bg-color, #ff8dcb);
+  }
+
+  .theme_light .footer__title {
+    text-shadow: 2px 2px 0px var(--bg-color, #ff8dcb);
+  }
 }

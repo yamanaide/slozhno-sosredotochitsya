@@ -1,7 +1,7 @@
 :root .theme_dark {
   --main-text-color: #F1B2CE;
   --text-color: #000028;
-  --main-font: IBM Plex Mono;
+  --main-font: 'IBM Plex Mono';
   --bg-color: #FF0070;
   --accent-color: #DB00FF;
 }
@@ -10,7 +10,7 @@
   :root {
     --main-text-color: #F1B2CE;
     --text-color: #000028;
-    --main-font: IBM Plex Mono;
+    --main-font: 'IBM Plex Mono';
     --bg-color: #FF0070;
     --accent-color: #DB00FF;
   }
@@ -32,7 +32,7 @@
   
   .header__theme-menu-button {
     color: var(--bg-color, #FF0070);
-    background-color: var(--text-color, #000028);
+    background-color: transparent;
   }
   
   .header__theme-menu-button:hover {
@@ -148,7 +148,7 @@
 
 .theme_dark .header__theme-menu-button {
   color: var(--bg-color, #FF0070);
-  background-color: var(--text-color, #000028);
+  background-color: transparent;
 }
 
 .theme_dark .header__theme-menu-button:hover {
