@@ -4,6 +4,7 @@
   --main-font: 'IBM Plex Mono';
   --bg-color: #ff8dcb;
   --accent-color: #FF0070;
+  --title-color: #FFC2E6;
 }
 
 .page.theme_light {
@@ -43,7 +44,7 @@
 }
 
 .theme_light .header__title {
-  color: #FFC2E6;
+  color: var(--title-color, #FFC2E6);
   text-shadow: 4px 4px 0px var(--accent-color, #FF0070);
 }
 
@@ -93,7 +94,7 @@
 }
 
 .theme_light .footer__title {
-  color: #FFC2E6;
+  color: var(--title-color, #FFC2E6);
   text-shadow: 2px 2px 0px var(--accent-color, #FF0070);
 }
 
